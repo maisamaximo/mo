@@ -1,8 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: 'export',  // Adicionando a exportação estática
-  trailingSlash: true,  // Garantir que todas as URLs terminem com uma barra "/"
+  output: 'export',  // Exportação estática
+  trailingSlash: true,  // URLs terminam com "/"
+  images: {
+    unoptimized: true,  // Desativa otimização de imagem para funcionar com export
+  },
 };
 
 export default nextConfig;
